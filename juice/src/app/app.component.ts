@@ -6,6 +6,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PresentationComponent } from './presentation/presentation.component';
 import { TournoipresentationComponent } from './tournoipresentation/tournoipresentation.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
