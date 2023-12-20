@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -13,7 +13,10 @@ import { TournoipresentationComponent } from './tournoipresentation/tournoiprese
   standalone: true,
   imports: [CommonModule, RouterOutlet,HttpClientModule, HeaderComponent,SignupComponent,PresentationComponent,TournoipresentationComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+//   providers: [
+//     provideHttpClient(withFetch()), // Activer l'utilisation de `fetch`
+//   ]
 })
 
 export class AppComponent {
