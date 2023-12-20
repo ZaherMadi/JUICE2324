@@ -19,17 +19,17 @@ export class SignupComponent {
   }
   
   constructor(private httpService: HttpService) {}
-  
+
   PostAPI() {
-    this.httpService.postUser(this.myUser).subscribe(
-      response => {
-        console.log('Réponse du serveur :', response);
+    this.httpService.postUser(this.myUser).subscribe({
+      next: (response) => {
+        console.log('User created:', response);
       },
-      error => {
-        console.error('Erreur lors de la requête POST :', error);
+      error: (error) => {
+        console.error('Error creating user:', error);
       }
-    );
+    });
   }
 
 
-
+}
