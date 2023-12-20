@@ -1,24 +1,24 @@
 <div>
-    <form>
+    <form (ngSubmit)="PostAPI()">
 
       <label for="gender">Genre</label>
-      <select id="genre" name="genre">
+      <select id="genre" name="genre"  [(ngModel)]="myUser.gender" (ngModelChange)="onModelChange()">
         <option value="M.">M.</option>
         <option value="Mme">Mme</option>
       </select>
       <br>
       <br>
       <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom"><br><br>
+      <input type="text" id="nom" name="nom" [(ngModel)]="myUser.name" (ngModelChange)="onModelChange()" required><br><br>
       
       <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom"><br><br>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="myUser.firstname" (ngModelChange)="onModelChange()" required><br><br>
       
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
+      <input type="email" id="email" name="email" [(ngModel)]="myUser.email" (ngModelChange)="onModelChange()" required><br><br>
 
       <label for="field4">N° de telephone:</label>
-      <input type="text" id="phone" name="phone"><br><br>
+      <input type="number" id="phone" name="phone" [(ngModel)]="myUser.phone" (ngModelChange)="onModelChange()" required><br><br>
 
       <button type="submit">Soumettre</button>
     </form>
