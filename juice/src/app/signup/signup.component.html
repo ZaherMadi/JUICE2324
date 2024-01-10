@@ -1,38 +1,110 @@
-<div>
-    <form (ngSubmit)="PostAPI()">
+<!-- <div>
+  <form (ngSubmit)="PostAPI()">
+    <label for="gender">Genre</label>
+    <select id="genre" name="genre" [(ngModel)]="myUser.gender">
+      <option value="M.">M.</option>
+      <option value="Mme">Mme</option>
+    </select>
+    <br />
+    <br />
+    <label for="nom">Nom:</label>
+    <input
+      type="text"
+      id="nom"
+      name="nom"
+      placeholder="Leo"
+      [(ngModel)]="myUser.name"
+      required
+    /><br /><br />
 
-      <label for="gender">Genre</label>
-      <select id="genre" name="genre"  [(ngModel)]="myUser.gender">
-        <option value="M.">M.</option>
-        <option value="Mme">Mme</option>
-      </select>
-      <br>
-      <br>
-      <label for="nom">Nom:</label>
-      <input type="text" id="nom" name="nom" [(ngModel)]="myUser.name" required><br><br>
-      
-      <label for="prenom">Prénom:</label>
-      <input type="text" id="prenom" name="prenom" [(ngModel)]="myUser.firstname" required><br><br>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" [(ngModel)]="myUser.email" required><br><br>
+    <label for="prenom">Prénom:</label>
+    <input
+      type="text"
+      id="prenom"
+      name="prenom"
+      placeholder="Messi"
+      [(ngModel)]="myUser.firstname"
+      required
+    /><br /><br />
 
-      <label for="field4">N° de telephone:</label>
-      <input type="number" id="phone" name="phone" [(ngModel)]="myUser.phone" required><br><br>
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="heidenheim@gmail.com"
+      [(ngModel)]="myUser.email"
+      required
+    /><br /><br />
 
-      <button type="submit">Soumettre</button>
-    </form>
+    <label for="field4">N° de telephone:</label>
+    <input
+      type="number"
+      id="phone"
+      name="phone"
+      [(ngModel)]="myUser.phone"
+      required
+    /><br /><br />
+
+    <button type="submit">Soumettre</button>
+  </form>
+</div> -->
+
+<!-- --------------------------- -->
+<form (ngSubmit)="PostAPI()">
+  <mat-form-field>
+    <mat-label>Genre</mat-label>
+    <mat-select id="genre" name="genre" [(ngModel)]="myUser.gender">
+      <mat-option value="M.">Mr</mat-option>
+      <mat-option value="Mme">Mme</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Prenom</mat-label>
+    <input matInput [(ngModel)]="myUser.firstname" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Nom</mat-label>
+    <input matInput id="prenom" name="prenom" [(ngModel)]="myUser.name" />
+  </mat-form-field>
+
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>Pseudo</mat-label>
+      <input
+        matInput
+        #input
+        maxlength="20"
+        placeholder="sojuice"
+        [(ngModel)]="myUser.pseudo"
+        id="pseudo"
+        name="pseudo"
+      />
+    </mat-form-field>
   </div>
-<br><br><br><br>
 
-<mat-form-field>
-  <mat-label>Input</mat-label>
-  <input matInput>
-</mat-form-field>
-<mat-form-field>
-  <mat-label>Select</mat-label>
-  <mat-select>
-    <mat-option value="one">First option</mat-option>
-    <mat-option value="two">Second option</mat-option>
-  </mat-select>
-</mat-form-field>
+  <mat-form-field>
+    <mat-label>N° de telephone</mat-label>
+    <input matInput [(ngModel)]="myUser.phone" />
+  </mat-form-field>
+  <div class="example-container">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        placeholder="pat@example.com"
+        [formControl]="email"
+        [(ngModel)]="myUser.email"
+        required
+      />
+      @if (email.invalid) {
+      <mat-error>{{ getErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+  </div>
+  <button type="submit" mat-raised-button>Soumettre</button>
+  <!-- <button type="submit" mat-raised-button [disabled]="!email.valid">Soumettre</button> -->
+
+</form>
