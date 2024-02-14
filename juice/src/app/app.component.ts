@@ -6,12 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './signup/signup.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { TournoipresentationComponent } from './tournoipresentation/tournoipresentation.component';
-
+import { OverlayComponent } from './overlay/overlay.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,HttpClientModule, HeaderComponent,SignupComponent,PresentationComponent,TournoipresentationComponent],
+  imports: [CommonModule, OverlayComponent, RouterOutlet,HttpClientModule, HeaderComponent,SignupComponent,PresentationComponent,TournoipresentationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 //   providers: [

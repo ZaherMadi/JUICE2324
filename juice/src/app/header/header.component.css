@@ -3,21 +3,24 @@
     position: relative;
 } */
 header {
+  position: relative;
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FEEAE6; /* Change this to your desired header background color */
+    background-color: #ffffff; /* Change this to your desired header background color */
     padding: 1rem;
-  }
-  
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.311);
+    margin-bottom: 4px;
+}
   header a {
     text-decoration: none;
     color: #000; /* Change this to your desired link color */
     font-weight: bold;
     margin: 0 1rem;
+    
   }
 /*   
   header img {
-    width: 200px; /* You can adjust this as needed */
-  }
+    width: 200px; /* You can adjust this as needed 
    */

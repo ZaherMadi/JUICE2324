@@ -71,17 +71,5 @@ export class SignupComponent {
   }
   // constructor(private httpService: HttpService) {}
 
-  // PostAPI() {
-  //   this.httpService.postUser(this.myUser).subscribe({
-  //     next: (response) => {
-  //       console.log('User created:', response);
-  //     },
-  //     error: (error) => {
-  //       console.error('Error creating user:', error);
-  //     }
-  //   });
-
-  //peutetre ne pas faire le service et utilisé individuellement pck ca marche p
 }
 
-// }
