@@ -10,7 +10,6 @@ header {
     align-items: center;
     background-color: #ffffff; /* Change this to your desired header background color */
     padding: 1rem;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.311);
     margin-bottom: 4px;
 }
   header a {

@@ -1,5 +1,7 @@
 .overlay-container {
     position: relative;
+
+    
   }
   
   .overlay-button {
@@ -11,5 +13,11 @@
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    
   }
   
+
+  .shadow{
+    box-shadow: inset 50px 50px 5àpx rgba(0, 0, 0, 0.311);
+
+  }
